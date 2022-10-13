@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 
 pub = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 172.16.1.18)(PORT = 1521)) '
 pub += '(CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = sb2prod) ) )'
-pub_con = create_engine("oracle+cx_oracle://azeezayinla:azeezayinla@" + pub)
+pub_con = create_engine("oracle+cx_oracle://username:password@" + pub)
 
 def mf_comm_df(dpid):
     df = pd.read_sql(f"""with rpt_cy as (
